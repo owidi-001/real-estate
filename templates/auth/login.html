@@ -1,7 +1,24 @@
-{% extends "auth/base_auth.html" %}
+{% extends "base.html" %}
 {% load static %}
 
-{% block auth %}
-   <h1> Login </h1>
-    
-{% endblock auth %}
+{% block main %}
+    <div class="form">
+                <form action="login" method="post">
+                    {% csrf_token %}
+                    <h2>Sign In</h2>
+                    <p>Enter your details to login</p>
+                    <div class="form-group">
+                        <label for="email" class="input-label">Email</label>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Email address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="input-label">Password</label>
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Secret password" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Submit" class="form-control button-primary">
+                        <p>Don't have an account? <a href="{% url 'register'%}">Create account</a></p>
+                    </div>
+                </form>
+            </div>
+{% endblock main %}

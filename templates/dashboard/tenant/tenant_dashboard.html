@@ -1,0 +1,90 @@
+{% extends "dashboard/dashboard.html" %}
+{% load static %}
+
+{% block dash %}
+    <!-- buffer -->
+        <div class="buffer">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>Recommended</h2>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <a href="#" class="btn btn-primary">Lake Villa</a>
+                        </div>
+                        <div class="col-sm-4">
+                            <a href="#" class="btn btn-primary">Modern</a>
+                        </div>
+                        <div class="col-sm-4">
+                            <a href="#" class="btn btn-primary">Camping</a>
+                        </div>
+                        <div class="col-sm-4">
+                            <a href="#" class="btn btn-primary">Flat</a>
+                        </div>
+                        <div class="col-sm-4">
+                            <a href="#" class="btn btn-primary">Luxury House</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-head">
+                        <span><i class="bi bi-filter"></i></span>
+                        <span>Filters</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <input type="search" name="filter" id="filter" class="form-control">
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="#" class="button-primary">
+                                        <span><i class="bi bi-search"></i></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <span><i class="bi bi-location"></i></span>
+                                    <span>Location</span>
+                                </div>
+                                <div class="col-md-4">
+                                    <span><i class="bi bi-list"></i></span>
+                                    <span>Type</span>
+                                </div>
+                                <div class="col-md-4">
+                                    <span><i class="bi bi-money"></i></span>
+                                    <span>Price range</span>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-md-4">
+                                    <select name="location" id="location" class="form-control">
+                                        <option value="all">All</option>
+                                        <option value="all">Njoro</option>
+                                        <option value="all">Nakuru</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <select name="type" id="type" class="form-control">
+                                        <option value="all">All</option>
+                                        <option value="all">Modern</option>
+                                        <option value="all">Flat</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <select name="price" id="price" class="form-control">
+                                        <option value="all">All</option>
+                                        <option value="a">0-3000</option>
+                                        <option value="b">3000-6k</option>
+                                        <option value="b">6000-10k</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+{% endblock dash %}

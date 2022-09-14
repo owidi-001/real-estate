@@ -1,7 +1,43 @@
-{% extends "auth/base_auth.html" %}
+{% extends "base.html" %}
 {% load static %}
 
-{% block auth %}
-   <h1> Registration </h1>
-
-{% endblock auth %}
+{% block main %}
+   <div class="form">
+                <form action="register" method="post">
+                   {% csrf_token %}
+                    <h2>Sign Up</h2>
+                    <p>Enter your details to register</p>
+                    <div class="form-group">
+                        <label for="email" class="input-label">Email</label>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Email address" required>
+                    </div>
+                   <div class="form-group">
+                        <label for="phone" class="input-label">Phone</label>
+                        <input type="tel" class="form-control" name="phone" id="phone" placeholder="07xx xxx xxx" minlength="10" maxlength="10" required>
+                    </div>
+<!--                    <div class="form-group">-->
+<!--                        <legend>I want to:</legend>-->
+<!--                        <input type="radio" name="user_type" id="is_tenant"> | <label for="is_tenant" class="input-label">Buy/Rent Property</label>-->
+<!--                        <input type="radio" name="user_type" id="is_landlord"> | <label for="is_landlord" class="input-label">Sell/Advertise Property</label>-->
+<!--                        <input type="radio" name="user_type" id="is_agent"> | <label for="is_agent" class="input-label">Manage Property</label>-->
+<!--                    </div>-->
+                    <div class="form-group">
+<!--                        <legend>I want to:</legend>-->
+                        <label for="user_type">I want to:</label>
+                        <select name="user_type" class="form-control" id="user_type">
+                            <option value="is_tenant">Buy/Rent Property</option>
+                            <option value="is_landlord">Sell/Advertise Property</option>
+                            <option value="is_agent">Manage Property</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="input-label">Password</label>
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Secret password" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Submit" class="form-control button-primary">
+                        <p>Already have an account? <a href="{% url 'login'%}">Sign in</a></p>
+                    </div>
+                </form>
+            </div>
+{% endblock main %}

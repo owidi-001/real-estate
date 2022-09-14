@@ -1,0 +1,7 @@
+{% extends "dashboard/dashboard.html" %}
+{% load static %}
+
+{% block dash %}
+   <h1> Landlord dashboard content </h1>
+    <h2>{{request.user.email}}</h2>
+{% endblock dash %}

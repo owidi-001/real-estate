@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block main %}
+   <div class="dashboard">
+       <div class="sidebar">
+       <h2>Links</h2>
+    </div>
+    <div class="main">
+        <div class="container">
+            {% block dash %}
+
+            {% endblock dash %}
+        </div>
+    </div>
+   </div>
+{% endblock main %}

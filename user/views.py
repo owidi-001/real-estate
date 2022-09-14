@@ -60,7 +60,13 @@ def signin(request):
 
     return render(request, 'auth/login.html')
 
+
+# Home view
+def home(request):
+    return render(request, "home/home.html")
+
 # logout
+
 # DONE: on urls
 
 # profile
