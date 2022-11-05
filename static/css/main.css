@@ -1,3 +1,4 @@
+{% load static %}
 :root {
     --primary: #003ECB;
     --gradient: #003ECB;
@@ -23,6 +24,10 @@ a{
 }
 li{
     list-style: none;
+}
+img{
+    width: 100%;
+    height: auto;
 }
 .button-primary{
     padding: 8px 18px;
@@ -56,11 +61,11 @@ nav{
     font-weight: 400;
     text-transform: capitalize;
 }
-nav a.nav-brand{
+nav a.nav-brand,.footer a.nav-brand{
     color: var(--primary);
     font-weight: 800;
 }
-nav a.nav-brand span{
+nav a.nav-brand span,.footer a.nav-brand span{
     border-top: 0.2em solid var(--primary);
 }
 nav a.nav-link:hover{
@@ -79,15 +84,21 @@ main{
     justify-content: center;
     position: relative;
 }
-main .container:nth-child(1){
-    min-height: 100vh;
-    /*background: var(--white);*/
+/*main .container:nth-child(1){*/
+/*    min-height: 100vh;*/
+/*    !*background: var(--white);*!*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*}*/
+
+/* Auth forms */
+.auth{
+    min-height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
-/* Auth forms */
 .form{
     background: var(--white);
     border: 1px solid lightgray;
@@ -97,6 +108,7 @@ main .container:nth-child(1){
 .form-group{
     margin: 1em 0em;
 }
+
 
 /* Dashboard content */
 .dashboard{
@@ -113,7 +125,7 @@ main .container:nth-child(1){
     background: var(--light);
     flex: 4;
     border-left: 1px solid lightgrey;
-border-right: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
 }
 
 /* alert messages */
@@ -122,6 +134,7 @@ border-right: 1px solid lightgrey;
     align-items: center;
     justify-content: center;
     position: relative;
+    z-index: 100;
 }
 .messages{
     width: 40%;
@@ -146,4 +159,86 @@ border-right: 1px solid lightgrey;
     /*max-height: 10em;*/
     overflow-y: scroll;
     padding-top: 0.5em;
+}
+
+/* DASHBOARDS */
+/* dashboards  tenant */
+content .card-body{
+    padding: 0 !important;
+}
+content .card-img-overlay{
+
+    width: 100% !important;
+    height: 100% !important;
+    /*background: pink !important;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+content .card-img-overlay a{
+    display: none !important;
+}
+content .card-img-overlay:hover a{
+    display: block !important;
+}
+/* dashboards  landlord */
+
+/* dashboards  tenant */
+
+
+/* Home/landing page */
+.hero{
+    min-height:calc(100vh - 3.25em);
+    background: linear-gradient(to right,rgba(255,255,255),rgba(0,0,0,0.2),rgba(255,255,255,0.8)),url("../images/hero.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    z-index: 10;
+}
+/* intro */
+.intro{
+    min-height: calc( 40vh - 3.25em);
+}
+
+/* pieces */
+.pieces{
+    min-height: calc( 60vh - 3.25em);
+}
+.pieces .bottom{
+    min-height: calc( 40vh - 3.25em);
+}
+
+.socio-links{
+    position: fixed;
+    left: 0;
+    top: calc(100vh - 70vh);
+}
+.socio-links li{
+    border: 1px solid var(--light);
+}
+.socio-links a{
+    color: var(--white) !important;
+    z-index: 5;
+}
+/*.socio-links a i{*/
+    /*color: var(--white) !important;*/
+    /*font-size: 2em;*/
+/*}*/
+.chat-link{
+    position: fixed;
+    bottom: 4.5em;
+    right: 1em;
+    border-radius: 50%;
+
+}
+
+/* footer */
+.footer{
+    /*position: absolute;*/
+    width: 100%;
+    bottom: 0;
 }

@@ -2,8 +2,10 @@
 {% load static %}
 
 {% block main %}
-   <div class="form">
-                <form action="register" method="post">
+
+  <div class="auth container">
+       <div class="form">
+                <form method="post">
                    {% csrf_token %}
                     <h2>Sign Up</h2>
                     <p>Enter your details to register</p>
@@ -40,4 +42,5 @@
                     </div>
                 </form>
             </div>
+  </div>
 {% endblock main %}

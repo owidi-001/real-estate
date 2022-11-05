@@ -2,6 +2,110 @@
 {% load static %}
 
 {% block dash %}
-   <h1> Landlord dashboard content </h1>
-    <h2>{{request.user.email}}</h2>
+    <!-- buffer -->
+        <div class="buffer bg-white p-4">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card p-2">
+                        <div class="card-head">
+                            <div class="card-title">
+                                Recommended
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex align-items-center justify-content-start gap-2 flex-wrap">
+                        <div class="p-2">
+                            <a href="#" class="btn btn-primary">Lake Villa</a>
+                        </div>
+                        <div class="p-2">
+                            <a href="#" class="btn btn-primary">Modern</a>
+                        </div>
+                        <div class="p-2">
+                            <a href="#" class="btn btn-primary">Camping</a>
+                        </div>
+                        <div class="p-2">
+                            <a href="#" class="btn btn-primary">Flat</a>
+                        </div>
+                        <div class="p-2">
+                            <a href="#" class="btn btn-primary">Luxury House</a>
+                        </div>
+
+                    </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-8">
+                    <div class="card p-2">
+                        <div class="card-head">
+                        <div class="card-title">
+                            <span><i class="bi bi-filter"></i></span>
+                        <span>Filters</span>
+                        </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <input type="search" name="filter" id="filter" class="form-control" placeholder="search">
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="#" class="btn btn-primary">
+                                        <span><i class="bi bi-search"></i></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <span><i class="bi bi-location"></i></span>
+                                    <span>Location</span>
+                                </div>
+                                <div class="col-md-4">
+                                    <span><i class="bi bi-list"></i></span>
+                                    <span>Type</span>
+                                </div>
+                                <div class="col-md-4">
+                                    <span><i class="bi bi-money"></i></span>
+                                    <span>Price range</span>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-md-4">
+                                    <select name="location" id="location" class="form-control">
+                                        <option value="all">All</option>
+                                        <option value="all">Njoro</option>
+                                        <option value="all">Nakuru</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <select name="type" id="type" class="form-control">
+                                        <option value="all">All</option>
+                                        <option value="all">Modern</option>
+                                        <option value="all">Flat</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <select name="price" id="price" class="form-control">
+                                        <option value="all">All</option>
+                                        <option value="a">0-3000</option>
+                                        <option value="b">3000-6k</option>
+                                        <option value="b">6000-10k</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <!--        Content area-->
+        <div class="content p-4">
+
+        </div>
+    </div>
+
+
 {% endblock dash %}

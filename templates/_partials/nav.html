@@ -2,18 +2,24 @@
         <div class="container-fluid">
             <ul class="nav-list flex">
                 <div class="nav-item"><a href="{% url 'home'%}" class="nav-link nav-brand"><span>Real</span>Estate</a></div>
-                <li class="nav-item"><a href="#" class="nav-link" disabled>Buy</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Sell</a></li>
-                <li class="nav-item"><a href="{% url 'tenant_dashboard'%}" class="nav-link">Rent</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Find Agent</a></li>
+                {% if request.user.is_authenticated %}
+                    <li class="nav-item"><a href="{% url 'tenant_dashboard'%}" class="nav-link" disabled>Buy</a></li>
+                    <li class="nav-item"><a href="{% url 'landlord_dashboard'%}" class="nav-link">Sell</a></li>
+                    <li class="nav-item"><a href="{% url 'tenant_dashboard'%}" class="nav-link">Rent</a></li>
+                    <li class="nav-item"><a href="{% url 'landlord_dashboard'%}" class="nav-link">Find Agent</a></li>
+                {% endif %}
             </ul>
-            <div class="search"> <input type="search" class="form-control" name="search" id="search" placeholder="Search"></div>
+
             <ul class="nav-list flex">
-                <li class="nav-item"><a href="#" class="nav-link" disabled>Manage Rentals</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Advertise Property</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Find Rentals</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Help</a></li>
-                <li class="nav-item"><a href="{% url 'login'%}" class="button-primary">Sign in</a></li>
+                {% if request.user.is_authenticated%}
+                    <li class="nav-item"><a href="{% url 'agent_dashboard'%}" class="nav-link">Manage Rentals</a></li>
+                    <li class="nav-item"><a href="{% url 'landlord_dashboard'%}" class="nav-link">Advertise Property</a></li>
+                    <li class="nav-item"><a href="{% url 'tenant_dashboard'%}" class="nav-link">Find Rentals</a></li>
+                    <li class="nav-item"><a href="{% url 'logout'%}" class="btn btn-primary">Sign out</a></li>
+                {% else %}
+                    <li class="nav-item"><a href="#" class="nav-link">Help</a></li>
+                    <li class="nav-item"><a href="{% url 'login'%}" class="btn btn-primary">Sign in</a></li>
+                {% endif %}
             </ul>
         </div>
     </nav>
