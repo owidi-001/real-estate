@@ -4,14 +4,14 @@
 {% block main %}
 
 <!--   hero    -->
-   <div class="hero d-flex align-items-center justify-content-start">
-        <div class="container">
-            <div class="left">
+<div class="hero d-flex align-items-center justify-content-start">
+    <div class="container">
+        <div class="left">
             <h2>Rent your home.</h2>
             <h2>Sell your property.</h2>
             <h2>Become a manager</h2>
             <p>Welcome to your new living! </p>
-            <div class="card" style="width: 20em">
+            <div class="card border-top" style="width: 20em">
                 <div class="card-img-top">
                     <img src="{% static 'images/agent.jpg'%}" alt="" srcset="">
                     <div class="card-img-overlay">
@@ -20,23 +20,24 @@
                 </div>
             </div>
         </div>
-        </div>
-   </div>
+    </div>
+</div>
 
 <div class="container">
     <!--    Intro section   -->
-   <div class="intro bg-white text-secondary d-flex align-items-center justify-content-start">
-       <div class="container d-flex align-items-center flex-column">
-           <p>The best home aquisation platform.</p>
-           <h2 class="h2">Free, convenient and Easy to use</h2>
-       </div>
-   </div>
+    <div class="intro bg-white text-secondary d-flex align-items-center justify-content-start">
+        <div class="container d-flex align-items-center flex-column">
+            <p>The best home aquisation platform.</p>
+            <h2 class="h2">Free, convenient and Easy to use</h2>
+        </div>
+    </div>
 
     <div class="row mb-4">
         <div class="col-md-6">
             <p class="text-secondary ">Hello and welcome</p>
             <h2 class="h2">
-                 RealEstate is leading the way in creating unique real estate. Discover your perfect rental! Vibrant cities. Beautiful homes.
+                RealEstate is leading the way in creating unique real estate. Discover your perfect rental! Vibrant
+                cities. Beautiful homes.
             </h2>
             <div class="row pt-4">
                 <div class="col-md-6 d-flex align-items-center">
@@ -46,7 +47,8 @@
                 </div>
                 <div class="col-md-6">
                     <p class="text-secondary">
-                        It is important to us that we always provide the highest quality service. You can count on us to do everything for you, and even a little more.
+                        It is important to us that we always provide the highest quality service. You can count on us to
+                        do everything for you, and even a little more.
                     </p>
                 </div>
             </div>
@@ -59,26 +61,44 @@
 
 
     <!--   pieces    -->
-       <div class="pieces bg-black text-white">
+    <div class="pieces bg-black text-white">
         <div class="top d-flex align-items-center flex-column justify-content-center pt-4">
 
-            <span class="icon d-flex align-items-center justify-content-center bg-primary rounded-circle p-4">
-                        <i class="bi bi-hand-thumbs-up-fill"></i>
+            <span class="icon d-flex align-items-center justify-content-center rounded-circle bg-primary"
+                style="width: 4em; height: 4em;">
+                <i class="bi bi-hand-thumbs-up-fill" style="font-size: 2em;"></i>
             </span>
-            <h2 class="title pt-2">Get your home in minutes</h2>
-                <div class="d-flex align-items-center justify-content-center gap-1 p-2 text-secondary">
-                    <i class="bi bi-hand-thumbs-up-fill"></i> 20
-                    <i class="bi bi-eye-fill"></i> 25
-                    <i class="bi bi-chat-fill"></i> 5
-                </div>
-                <p class="text-secondary p-2">Published on Sep 15 /22</p>
+            <h2 class="title pt-2">Get your dream home in minutes</h2>
+            <div class="d-flex align-items-center justify-content-center gap-4 p-2 text-secondary">
+                <span><i class="bi bi-hand-thumbs-up-fill"></i> 20</span>
+                <span><i class="bi bi-eye-fill"></i> 25</span>
+                <span><i class="bi bi-chat-fill"></i> 5</span>
+            </div>
+            <p class="text-secondary p-2">Published on Sep 15 /22</p>
         </div>
-           <div class="bottom bg-secondary">
-                <div class="carousel height-50">
-
+        <div class="bottom bg-secondary">
+            <div class="carousel height-50">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="{% static 'images/carousel/h1.jpg'%}" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="{% static 'images/carousel/h2.jpg'%}" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="{% static 'images/carousel/h3.jpg'%}" alt="Third slide">
+                        </div>
+                    </div>
                 </div>
-           </div>
-       </div>
+            </div>
+        </div>
+    </div>
 
     <div class="socio-links">
         <ul class="btn-group-vertical p-2">
@@ -91,7 +111,7 @@
 
     <!--    floating message button-->
     <div class="chat-link">
-<!--        <i class="bi bi-chat-dots-fill"></i>-->
+        <!--        <i class="bi bi-chat-dots-fill"></i>-->
         <span class="bg-primary icon text-white rounded-circle p-3">
             <i class="bi bi-robot"></i>
         </span>
@@ -101,15 +121,15 @@
 
 
 
-   </div>
+</div>
 <!--footer-->
-    <div class="footer bg-white border-top pl-2 pr-2 mt-4 d-flex align-items-center justify-content-between nav-fixed">
-           <ul class="nav-list d-flex align-items-center gap-4">
-               <li class="nav-item"><a href="#" class="nav-link">Lorem</a></li>
-               <li class="nav-item"><a href="#" class="nav-link">Lorem</a></li>
-               <li class="nav-item"><a href="#" class="nav-link">Lorem</a></li>
-               <li class="nav-item"><a href="#" class="nav-link">Lorem</a></li>
-           </ul>
-           <div class="nav-item"><a href="{% url 'home'%}" class="nav-link nav-brand"><span>Real</span>Estate</a></div>
-       </div>
+<div class="footer bg-white border-top pl-2 pr-2 mt-4 d-flex align-items-center justify-content-between nav-fixed">
+    <ul class="nav-list d-flex align-items-center gap-4">
+        <li class="nav-item"><a href="#" class="nav-link">Privacy Policy</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Terms Of service</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Patners</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-item"><a href="{% url 'home'%}" class="nav-link nav-brand"><span>Real</span>Estate</a></div>
+</div>
 {% endblock main %}
